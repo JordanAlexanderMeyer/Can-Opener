@@ -137,6 +137,9 @@ var root = {
 
 var app = express();
 var port = process.env.PORT || 8080;
+var secure = require('ssl-express-www');
+
+app.use(secure);
 
 app.use(express.static(__dirname));
 
